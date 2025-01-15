@@ -20,6 +20,8 @@ class RunManager:
     valid = False
 
     def __init__(self, readonly=True):
+        with open('./logfile.log', 'a') as log_file:
+            log_file.write(f"Host: {DB_HOST}, Port: {DB_PORT}, User: {DB_USER_WR}, Name: {DB_NAME}\n")
         if (readonly == False):
             self.database = Database(DB_HOST, DB_PORT, DB_USER_WR, \
                                          DB_PASS_WR, DB_NAME)

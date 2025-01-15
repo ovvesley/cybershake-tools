@@ -2,19 +2,23 @@
 
 
 # DB Constants
-#DB_HOST = "focal.usc.edu"
-#DB_HOST = "moment.usc.edu"
-DB_HOST = "moment"
+DB_HOST = "focal.usc.edu"
+# DB_HOST = "moment.usc.edu"
+# DB_HOST = "moment"
 DB_PORT = 3306
 DB_USER = "cybershk_ro"
 DB_PASS = "CyberShake2007"
 DB_NAME = "CyberShake"
-DB_WR_FILE = "/home/shock/scottcal/runs/config/db_pass.txt"
+DB_WR_FILE = "/usr/src/app/cybershake-tools/runmanager/config/db_pass.txt"
 with open(DB_WR_FILE, "r") as fp_in:
     pieces = fp_in.readline().split(":")
     DB_USER_WR = pieces[0].strip()
     DB_PASS_WR = pieces[1].strip()
+    print("DB_USER_WR: %s" % DB_USER_WR)
+    print("DB_PASS_WR: %s" % DB_PASS_WR)
     fp_in.close() 
+
+
 
 # Valid computing resources
 HOST_LIST = ["unknown", "hpc", "mercury", "abe", "ranger", "kraken", \

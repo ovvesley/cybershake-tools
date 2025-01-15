@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_RUN_DIR="/home/shock/scottcal/runs"
+ROOT_RUN_DIR="/usr/src/app/"
 ROOT_DIR=`dirname $0`/..
 DAX_GEN_DIR="${ROOT_DIR}/dax-generator-3"
 
@@ -243,6 +243,7 @@ else
             echo "Failed to find matching run."
             exit 2
         fi
+        echo "RUN_ID: ${RUN_ID}"
         echo "${RUN_ID} ${SITE} ${ERF} ${SGT_VAR} ${RUP_VAR} ${VEL_ID} ${FREQ} ${SRC_FREQ}" >> ${RUN_FILE}
         #RUN_ID_STRING=${RUN_ID}
     fi

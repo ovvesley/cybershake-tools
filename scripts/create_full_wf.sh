@@ -1,6 +1,6 @@
 #!/bin/bash
 
-ROOT_RUN_DIR="/home/shock/scottcal/runs"
+ROOT_RUN_DIR="/usr/src/app/"
 ROOT_DIR=`dirname $0`/..
 DAX_GEN_DIR="${ROOT_DIR}/dax-generator-3"
 

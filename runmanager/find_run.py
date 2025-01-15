@@ -116,6 +116,7 @@ def findMatch(rm, run, match_states):
 
     pref_match = None
 
+
     for s in match_states:
         run.setStatus(s)
         matches = rm.getRuns(run, lock=False)
@@ -139,7 +140,7 @@ def findMatch(rm, run, match_states):
 def main():
     global info
 
-    rm = RunManager(readonly=False)
+    rm = RunManager(readonly=True)
     rm.useHTML(False)
 
     searchrun = Run()
